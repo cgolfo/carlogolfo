@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of Carlo Golfo">
+    <title>Carlo Golfo - Personal Website</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="logo">Carlo Golfo</a>
+                <ul class="nav-menu">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Hello, I'm <span class="highlight">Carlo Golfo</span></h1>
+                <p class="hero-subtitle">AI Research Engineer | ML Algorithms | Full-Stack Developer | Open to Opportunities</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Learn More</a>
+                    <a href="assets/resume/Carlo_Golfo_Software_Engineer_Resume_2026.pdf" class="btn btn-secondary" download>Download Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="assets/images/professionalheadshot.jpg" alt="Carlo Golfo" id="profile-image">
+                    </div>
+                    <div class="about-text">
+                        <p id="about-description">I'm a machine learning researcher exploring the mathematical foundations of modern AI, while maintaining a track record of building products that users actually love.</p>
+                        <div class="skills">
+                            <h3>Skills & Technologies</h3>
+                            <ul class="skills-list" id="skills-list">
+                                <!-- Skills will be populated via JavaScript -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="experience-list" id="experience-list">
+                    <!-- Experience entries populated via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Projects will be populated via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <p class="contact-text">Open to opportunities. Let's connect.</p>
+                    <div class="contact-links" id="contact-links">
+                        <!-- Contact links will be populated via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Carlo Golfo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
