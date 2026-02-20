@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeNavigation();
     initializeData();
     setCurrentYear();
+    initializeClock();
 });
 
 // Navigation functionality
@@ -251,4 +252,22 @@ function setCurrentYear() {
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
+}
+
+// Clock in navbar
+function initializeClock() {
+    const clockEl = document.getElementById('clock');
+    if (!clockEl) return;
+
+    function updateClock() {
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+        const pad = (n) => String(n).padStart(2, '0');
+        clockEl.textContent = pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
 }

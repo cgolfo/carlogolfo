@@ -63,6 +63,11 @@ header {
     text-decoration: underline;
 }
 
+.clock {
+    font-size: 1rem;
+    font-variant-numeric: tabular-nums;
+}
+
 .menu-toggle {
     display: none;
     flex-direction: column;
