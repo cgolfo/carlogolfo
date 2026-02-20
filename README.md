@@ -2,6 +2,54 @@
 
 Welcome! This README contains questions to help you populate your personal website with compelling content. Answer these questions to personalize your site.
 
+## GitHub Pages deployment (carlogolfo.com)
+
+This site deploys from the `main` branch and uses the custom domain **carlogolfo.com**.
+
+### 1. GitHub Pages settings
+
+1. In your repo, go to **Settings → Pages**.
+2. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+3. Choose **Branch**: `main`, **Folder**: `/ (root)**, then **Save**.
+4. Under **Custom domain**, enter `carlogolfo.com` and **Save**. Wait for DNS check (may show “Unverified” until DNS is set up).
+
+### 2. DNS at your domain registrar
+
+In the panel where you bought carlogolfo.com (e.g. Namecheap, Google Domains, Cloudflare), add these records:
+
+| Type | Name/Host | Value/Points to        |
+|------|-----------|------------------------|
+| **A**    | `@`   | `185.199.108.153` |
+| **A**    | `@`   | `185.199.109.153` |
+| **A**    | `@`   | `185.199.110.153` |
+| **A**    | `@`   | `185.199.111.153` |
+| **CNAME**| `www` | `cgolfo.github.io` |
+
+- **A records**: so `carlogolfo.com` (apex) works. Use `@` or leave “name” blank for the root domain, depending on your registrar.
+- **CNAME**: so `www.carlogolfo.com` works. Use your GitHub username (e.g. `cgolfo.github.io`).
+
+#### If you use GoDaddy and see a GoDaddy template page
+
+GoDaddy often shows a default “parking” or “forwarding” page instead of your site. Do this so the domain uses your DNS (and thus GitHub Pages):
+
+1. **Turn off forwarding and parking**
+   - In GoDaddy: **My Products** → click **DNS** (or **Manage**) next to carlogolfo.com.
+   - Look for **Forwarding** (or **Domain Forwarding** / **Web Forwarding**). If it’s ON, **Remove** or **Turn Off** forwarding so the domain is no longer pointed at a GoDaddy page.
+   - If you see **Parking** or a “Coming Soon” type page, remove or disable that too.
+
+2. **Use only DNS**
+   - Go to **DNS** (or **Manage DNS** / **DNS Management**) for carlogolfo.com.
+   - Delete any **A** record that points to a GoDaddy IP (e.g. `184.168.x.x` or similar). Delete any **CNAME** for `@` or `www` that points to GoDaddy.
+   - Then add exactly the records in the table above: four **A** records for `@` (Name = `@` or blank) with the four GitHub IPs, and one **CNAME** for `www` (Name = `www`) pointing to `cgolfo.github.io`.
+
+3. **Save** and wait 5–30 minutes. Visit **https://carlogolfo.com** again; you should see your GitHub site. If not, wait up to 24 hours for DNS propagation.
+
+### 3. HTTPS (optional but recommended)
+
+Back in **Settings → Pages**, after DNS is correct, check **Enforce HTTPS**. GitHub will issue a certificate for carlogolfo.com.
+
+Propagation can take from a few minutes up to 48 hours. After that, the site will be live at **https://carlogolfo.com** and **https://www.carlogolfo.com**.
+
 ## 📝 Basic Information
 
 1. **What is your full name?**
@@ -67,7 +115,7 @@ Welcome! This README contains questions to help you populate your personal websi
 
 11. **What are your social media profiles?**
     - GitHub: https://github.com/cgolfo
-    - LinkedIn URL
+    - LinkedIn URL https://github.com/cgolfo
     - Twitter/X URL (if applicable)
     - Personal website/blog URL (if applicable)
     - Other relevant profiles (Portfolio, Behance, Dribbble, etc.)
